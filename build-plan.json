@@ -1,0 +1,145 @@
+{
+  "seo": {
+    "serp_context": null,
+    "target_radius": 50,
+    "primary_keyword": "Nightlife in Pompano",
+    "secondary_keywords": []
+  },
+  "tier": "premium",
+  "email": "",
+  "pages": [],
+  "phone": "",
+  "assets": {
+    "logo": {
+      "url": "https://db.pageone.cloud/storage/v1/object/public/client-assets/bar-blu-pompano/logo/1781788105138-6g36uv-barblu_logo.png",
+      "storage_path": "bar-blu-pompano/logo/1781788105138-6g36uv-barblu_logo.png"
+    },
+    "images": [
+      {
+        "alt": "",
+        "url": "https://db.pageone.cloud/storage/v1/object/public/client-assets/bar-blu-pompano/logo/1781788105138-6g36uv-barblu_logo.png",
+        "page": "any",
+        "role": null,
+        "caption": "",
+        "context": "logo",
+        "storage_path": "bar-blu-pompano/logo/1781788105138-6g36uv-barblu_logo.png",
+        "quality_score": null
+      },
+      {
+        "alt": "",
+        "url": "https://db.pageone.cloud/storage/v1/object/public/client-assets/bar-blu-pompano/logo/1781788349174-ejmhf4-bar_blu.jpg",
+        "page": "any",
+        "role": null,
+        "caption": "",
+        "context": "logo",
+        "storage_path": "bar-blu-pompano/logo/1781788349174-ejmhf4-bar_blu.jpg",
+        "quality_score": null
+      }
+    ],
+    "page_allocations": null,
+    "recommended_hero_image": {
+      "alt": "",
+      "url": "https://db.pageone.cloud/storage/v1/object/public/client-assets/bar-blu-pompano/logo/1781788105138-6g36uv-barblu_logo.png",
+      "context": "logo",
+      "quality_score": null
+    }
+  },
+  "design": {
+    "fonts": {},
+    "notes": "Client runs a Newly established bar in pompano beach and wants to give off the nightclub feeling in combination with a sports bar. He goes by the motto \"LIVE ONCE · DRINK TWICE\" with Indoor and outdoor bars, rotating food trucks, ice-cold craft beer, and all the games on big screens. Whether you're here for the match or just a cold one — you're home.",
+    "style": "bold",
+    "colors": {
+      "accent": "#afb2b4",
+      "primary": "#1a2b3c",
+      "secondary": "#1a8cff",
+      "extracted_from_logo": false
+    },
+    "logo_analysis": {}
+  },
+  "domain": "bar-blu-pompano",
+  "phases": [
+    {
+      "name": "scaffold",
+      "phase": 1,
+      "status": "pending"
+    },
+    {
+      "name": "nav_footer_head",
+      "phase": 2,
+      "status": "pending"
+    },
+    {
+      "name": "homepage",
+      "phase": 3,
+      "status": "pending"
+    },
+    {
+      "name": "inner_pages",
+      "phase": 4,
+      "status": "pending"
+    },
+    {
+      "name": "seo_aeo_deploy",
+      "phase": 5,
+      "status": "pending"
+    }
+  ],
+  "address": {
+    "zip": "33060",
+    "city": "Pompano Beach",
+    "state": "FL",
+    "street": "537 S Dixie Hwy E"
+  },
+  "content": {
+    "usps": [
+      "retro arcade",
+      "sports bar",
+      "live music",
+      "live events",
+      "DJs",
+      "Good People",
+      "Good Vibes",
+      "Great price"
+    ],
+    "years": 2,
+    "insurance": "",
+    "description": "",
+    "certifications": []
+  },
+  "reviews": [],
+  "tagline": "Neighborhood Dive & Sports Bar in Pompano Beach",
+  "industry": "other",
+  "services": [],
+  "owner_name": "",
+  "client_slug": "bar-blu-pompano",
+  "form_action": "https://design.pageone.cloud/api/leads/bar-blu-pompano",
+  "github_repo": "",
+  "company_name": "bar-blu-pompano",
+  "service_areas": [
+    {
+      "zip": "33060",
+      "city": "",
+      "state": "FL",
+      "primary": true
+    }
+  ],
+  "image_curation": null,
+  "research_brief": null,
+  "competitor_urls": [
+    "http://www.atlanticnightclub.com/",
+    "https://www.instagram.com/thevegalounge/",
+    "https://pier6rooftop.com/",
+    "https://cosmosnightclublounge.com/"
+  ],
+  "phone_secondary": "",
+  "service_grouping": {
+    "cap": 16,
+    "tier": "premium",
+    "groups": [],
+    "grouped_count": 0,
+    "original_count": 0
+  },
+  "lead_notification_email": "",
+  "lead_notification_phone": "",
+  "google_business_profile_url": ""
+}
