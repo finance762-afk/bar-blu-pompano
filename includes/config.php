@@ -155,7 +155,7 @@ $colors = [
 
 // ── Design ──────────────────────────────────────────────────
 $style     = 'bold';    // Bold/Industrial archetype
-$cssVersion = '1';      // Increment on every styles.css change
+$cssVersion = '2';      // Increment on every styles.css change
 
 // ── Form ────────────────────────────────────────────────────
 $formAction = 'https://design.pageone.cloud/api/leads/bar-blu-pompano';
