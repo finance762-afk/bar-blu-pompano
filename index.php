@@ -58,7 +58,7 @@ $barPhoto = 'https://db.pageone.cloud/storage/v1/object/public/client-assets/bar
   display: grid;
   grid-template-columns: 1.1fr 0.9fr;
   gap: var(--space-4xl);
-  align-items: center;
+  align-items: flex-start;
   min-height: 100vh;
   padding: calc(var(--nav-height) + 3rem) clamp(1rem, 4vw, 2rem) clamp(4rem, 8vh, 6rem);
   max-width: var(--max-width);
@@ -88,9 +88,9 @@ $barPhoto = 'https://db.pageone.cloud/storage/v1/object/public/client-assets/bar
   flex-shrink: 0;
 }
 .hero-title {
-  font-size: clamp(2.6rem, 5.5vw, 5.5rem);
+  font-size: clamp(1.9rem, 3.4vw, 3.6rem);
   font-weight: 900;
-  line-height: 1.0;
+  line-height: 1.05;
   letter-spacing: -0.03em;
   color: #fff;
   margin: 0;
@@ -146,19 +146,37 @@ $barPhoto = 'https://db.pageone.cloud/storage/v1/object/public/client-assets/bar
   flex-shrink: 0;
 }
 
-/* ── Hero Form Card ── */
+/* ── Hero Form Card — electric blue 3D, pushed down ── */
 .hero-form-card {
-  background: rgba(7, 8, 15, 0.55);
-  backdrop-filter: blur(28px);
-  -webkit-backdrop-filter: blur(28px);
-  border: 1px solid rgba(0,197,255,0.18);
+  margin-top: clamp(4rem, 13vh, 7rem);
+  background: rgba(3, 6, 20, 0.74);
+  backdrop-filter: blur(32px);
+  -webkit-backdrop-filter: blur(32px);
+  border: 1px solid rgba(0,197,255,0.30);
+  border-top: 2px solid rgba(0,197,255,0.78);
   border-radius: var(--radius-xl);
   padding: var(--space-2xl) var(--space-2xl) var(--space-xl);
+  position: relative;
   box-shadow:
-    var(--shadow-xl),
-    0 0 60px rgba(0,0,0,0.55),
-    inset 0 1px 0 rgba(255,255,255,0.07),
-    0 0 40px rgba(0,197,255,0.05);
+    0 32px 80px rgba(0,0,0,0.82),
+    inset 0 1px 0 rgba(255,255,255,0.10),
+    inset 0 0 0 1px rgba(0,197,255,0.07),
+    0 0 55px rgba(0,140,255,0.28),
+    0 0 110px rgba(0,80,220,0.17),
+    0 0 220px rgba(0,40,200,0.11);
+}
+/* Electric rim-light on the top edge */
+.hero-form-card::before {
+  content: '';
+  position: absolute;
+  top: -2px; left: 16%; right: 16%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, rgba(0,197,255,0.95) 35%, rgba(0,197,255,0.95) 65%, transparent);
+  box-shadow:
+    0 0 18px 4px rgba(0,197,255,0.62),
+    0 0 48px 10px rgba(0,140,255,0.32);
+  border-radius: 50%;
+  pointer-events: none;
 }
 .hero-form-card h2 {
   font-size: clamp(1.3rem, 2.5vw, 1.75rem);
@@ -218,6 +236,20 @@ $barPhoto = 'https://db.pageone.cloud/storage/v1/object/public/client-assets/bar
   line-height: 1.65;
 }
 .form-footnote a { color: rgba(0,197,255,0.7); }
+
+/* ── Hero Overlay — enhanced electric blue atmosphere ── */
+.hero .hero-overlay {
+  background:
+    radial-gradient(ellipse 72% 55% at 94% 35%, rgba(0,130,255,0.35) 0%, transparent 58%),
+    radial-gradient(ellipse 50% 65% at 8% 82%, rgba(0,70,200,0.22) 0%, transparent 55%),
+    radial-gradient(ellipse 60% 40% at 50% 0%, rgba(0,50,180,0.18) 0%, transparent 50%),
+    linear-gradient(
+      155deg,
+      rgba(4, 5, 17, 0.96) 0%,
+      rgba(6, 13, 42, 0.86) 48%,
+      rgba(0,65,210,0.32) 100%
+    );
+}
 
 /* ── Ticker override (gradient) ── */
 .home-ticker {
@@ -623,9 +655,9 @@ $barPhoto = 'https://db.pageone.cloud/storage/v1/object/public/client-assets/bar
     gap: var(--space-3xl);
     align-items: flex-start;
   }
-  .hero-title { font-size: clamp(2.2rem, 7vw, 3.8rem); }
+  .hero-title { font-size: clamp(1.7rem, 6vw, 2.6rem); }
   .hero-subtitle { max-width: 100%; }
-  .hero-form-card { max-width: 520px; }
+  .hero-form-card { max-width: 520px; margin-top: var(--space-2xl); }
   .vibe-image { display: none; }
 }
 @media (max-width: 768px) {
@@ -653,12 +685,15 @@ $barPhoto = 'https://db.pageone.cloud/storage/v1/object/public/client-assets/bar
 
   <div class="hero-overlay"></div>
 
-  <!-- Floating accents -->
+  <!-- Floating accents — electric blue glow -->
   <div class="floating-accent float-animate"
-       style="width:500px;height:500px;top:-120px;right:-80px;opacity:0.04;"
+       style="width:600px;height:600px;top:-150px;right:-100px;opacity:0.12;"
        aria-hidden="true"></div>
   <div class="floating-accent float-animate-slow"
-       style="width:350px;height:350px;bottom:0;left:-60px;opacity:0.03;"
+       style="width:400px;height:400px;bottom:0;left:-80px;opacity:0.09;"
+       aria-hidden="true"></div>
+  <div class="floating-accent float-animate"
+       style="width:450px;height:450px;top:30%;right:0;opacity:0.08;animation-delay:-3s;"
        aria-hidden="true"></div>
 
   <div class="hero-split">
