@@ -59,6 +59,8 @@ $services = [
         'description' => 'Every game on massive big screens — the ultimate sports viewing destination in Pompano Beach.',
         'keywords'    => ['sports bar Pompano Beach', 'watch game Pompano Beach', 'NFL bar Fort Lauderdale'],
         'icon'        => 'tv-2',
+        'image'       => 'https://images.unsplash.com/photo-1566417713940-fe7c737a9ef2?w=600&h=360&fit=crop&auto=format&q=80',
+        'imageAlt'    => 'Sports bar interior with big-screen TVs and bar seating in Pompano Beach',
     ],
     [
         'name'        => 'Live Music & DJs',
@@ -66,6 +68,8 @@ $services = [
         'description' => 'Live bands, resident DJs, and rotating performers keeping the energy going all night.',
         'keywords'    => ['live music Pompano Beach', 'DJ bar Pompano Beach', 'nightlife Pompano Beach'],
         'icon'        => 'music',
+        'image'       => 'https://images.unsplash.com/photo-1501386761578-eac5c94b800a?w=600&h=360&fit=crop&auto=format&q=80',
+        'imageAlt'    => 'Live music performance with crowd at a nightlife venue in Pompano Beach',
     ],
     [
         'name'        => 'Indoor & Outdoor Bars',
@@ -73,6 +77,8 @@ $services = [
         'description' => 'Two full-service bars — a sleek indoor lounge and a laid-back outdoor patio built for South Florida nights.',
         'keywords'    => ['outdoor bar Pompano Beach', 'patio bar Pompano Beach', 'indoor bar Fort Lauderdale'],
         'icon'        => 'glass-water',
+        'image'       => 'https://images.unsplash.com/photo-1436076863939-06870fe779c2?w=600&h=360&fit=crop&auto=format&q=80',
+        'imageAlt'    => 'Full-service bar counter with craft beer and cocktails at an indoor lounge',
     ],
     [
         'name'        => 'Rotating Food Trucks',
@@ -80,6 +86,8 @@ $services = [
         'description' => 'Curated rotating food trucks serving fresh eats to pair with your cold craft beer.',
         'keywords'    => ['food trucks Pompano Beach', 'bar food Pompano Beach', 'eat and drink Pompano Beach'],
         'icon'        => 'utensils',
+        'image'       => 'https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=600&h=360&fit=crop&auto=format&q=80',
+        'imageAlt'    => 'Rotating food trucks serving street food outside Bar Blu in Pompano Beach',
     ],
     [
         'name'        => 'Retro Arcade',
@@ -87,6 +95,8 @@ $services = [
         'description' => 'Classic arcade games and pinball machines — drinks in hand, high scores on the line.',
         'keywords'    => ['arcade bar Pompano Beach', 'bar games Pompano Beach', 'retro arcade Fort Lauderdale'],
         'icon'        => 'gamepad-2',
+        'image'       => 'https://images.unsplash.com/photo-1511882150382-421056c89033?w=600&h=360&fit=crop&auto=format&q=80',
+        'imageAlt'    => 'Retro arcade machines and pinball inside a bar in Pompano Beach',
     ],
     [
         'name'        => 'Private Events',
@@ -94,6 +104,8 @@ $services = [
         'description' => 'Book Bar Blu for birthdays, corporate nights, watch parties, and private buyouts.',
         'keywords'    => ['private event venue Pompano Beach', 'bar buyout Pompano Beach', 'birthday party bar Fort Lauderdale'],
         'icon'        => 'calendar-check',
+        'image'       => 'https://images.unsplash.com/photo-1527529482837-4698179dc6ce?w=600&h=360&fit=crop&auto=format&q=80',
+        'imageAlt'    => 'Private event celebration with festive lighting at a Pompano Beach venue',
     ],
 ];
 
@@ -171,3 +183,4 @@ $usps = [
     'Ice-Cold Craft Beer',
     'Big Screens Everywhere',
 ];
+$leadsFormSecret = 'bac7714a8f41505ab12d75311ccbb11a6374e38b1a010d69111c84a652cfa0f3'; // spam-shield HMAC (matches leads fn LEADS_FORM_SECRET)
