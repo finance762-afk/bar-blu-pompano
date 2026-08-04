@@ -178,4 +178,5 @@ if (!empty($socialUrls)) {
   </script>
   -->
 
+<?php require_once __DIR__ . '/edit-mode.php'; ?>
 </head>
