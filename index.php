@@ -39,8 +39,8 @@ $faqs = [
 
 $schemaMarkup = generateFAQSchema($faqs);
 
-// ── Client photo (only available image) ───────────────────────
-$barPhoto = 'https://db.pageone.cloud/storage/v1/object/public/client-assets/bar-blu-pompano/logo/1781788349174-ejmhf4-bar_blu.jpg';
+// ── Vibe section image ────────────────────────────────────────
+$vibeImage = 'https://images.unsplash.com/photo-1572116469696-31de0f17cc34?w=600&h=720&fit=crop&auto=format&q=80';
 ?>
 <?php include $_SERVER['DOCUMENT_ROOT'] . '/includes/head.php'; ?>
 <body>
@@ -51,23 +51,26 @@ $barPhoto = 'https://db.pageone.cloud/storage/v1/object/public/client-assets/bar
    Bar Blu · Premium Tier · v1.0
    ====================================================== */
 
-/* ── Hero Split Layout ── */
+/* ── Hero Full-Width Layout ── */
 .hero-split {
   position: relative;
   z-index: 2;
-  display: grid;
-  grid-template-columns: 1.1fr 0.9fr;
-  gap: var(--space-4xl);
-  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
   min-height: 100vh;
-  padding: calc(var(--nav-height) + 3rem) clamp(1rem, 4vw, 2rem) clamp(4rem, 8vh, 6rem);
-  max-width: var(--max-width);
+  padding: calc(var(--nav-height) + 4rem) clamp(1.5rem, 5vw, 4rem) clamp(5rem, 10vh, 8rem);
+  max-width: var(--max-width-wide);
   margin: 0 auto;
 }
 .hero-text {
   display: flex;
   flex-direction: column;
-  gap: var(--space-lg);
+  align-items: center;
+  gap: var(--space-xl);
+  max-width: 900px;
 }
 .hero-location-badge {
   display: inline-flex;
@@ -88,13 +91,14 @@ $barPhoto = 'https://db.pageone.cloud/storage/v1/object/public/client-assets/bar
   flex-shrink: 0;
 }
 .hero-title {
-  font-size: clamp(1.9rem, 3.4vw, 3.6rem);
+  font-size: clamp(2.6rem, 6.5vw, 7rem);
   font-weight: 900;
-  line-height: 1.05;
-  letter-spacing: -0.03em;
+  line-height: 1.0;
+  letter-spacing: -0.04em;
   color: #fff;
   margin: 0;
   text-shadow: 0 2px 40px rgba(0,0,0,0.65);
+  text-wrap: balance;
 }
 @keyframes glow-pulse {
   0%, 100% { text-shadow: var(--glow-cyan); }
@@ -108,21 +112,23 @@ $barPhoto = 'https://db.pageone.cloud/storage/v1/object/public/client-assets/bar
 }
 .hero-subtitle {
   color: rgba(255,255,255,0.72);
-  font-size: clamp(0.95rem, 1.4vw, 1.1rem);
+  font-size: clamp(1rem, 1.6vw, 1.2rem);
   line-height: 1.8;
-  max-width: 500px;
+  max-width: 640px;
   margin: 0;
 }
 .hero-actions {
   display: flex;
   gap: var(--space-md);
   flex-wrap: wrap;
+  justify-content: center;
   margin-top: var(--space-sm);
 }
 .hero-trust-strip {
   display: flex;
   gap: var(--space-xl);
   flex-wrap: wrap;
+  justify-content: center;
   padding-top: var(--space-lg);
   border-top: 1px solid rgba(255,255,255,0.08);
   margin-top: var(--space-sm);
@@ -145,97 +151,6 @@ $barPhoto = 'https://db.pageone.cloud/storage/v1/object/public/client-assets/bar
   color: var(--color-accent);
   flex-shrink: 0;
 }
-
-/* ── Hero Form Card — electric blue 3D, pushed down ── */
-.hero-form-card {
-  margin-top: clamp(4rem, 13vh, 7rem);
-  background: rgba(3, 6, 20, 0.74);
-  backdrop-filter: blur(32px);
-  -webkit-backdrop-filter: blur(32px);
-  border: 1px solid rgba(0,197,255,0.30);
-  border-top: 2px solid rgba(0,197,255,0.78);
-  border-radius: var(--radius-xl);
-  padding: var(--space-2xl) var(--space-2xl) var(--space-xl);
-  position: relative;
-  box-shadow:
-    0 32px 80px rgba(0,0,0,0.82),
-    inset 0 1px 0 rgba(255,255,255,0.10),
-    inset 0 0 0 1px rgba(0,197,255,0.07),
-    0 0 55px rgba(0,140,255,0.28),
-    0 0 110px rgba(0,80,220,0.17),
-    0 0 220px rgba(0,40,200,0.11);
-}
-/* Electric rim-light on the top edge */
-.hero-form-card::before {
-  content: '';
-  position: absolute;
-  top: -2px; left: 16%; right: 16%;
-  height: 2px;
-  background: linear-gradient(90deg, transparent, rgba(0,197,255,0.95) 35%, rgba(0,197,255,0.95) 65%, transparent);
-  box-shadow:
-    0 0 18px 4px rgba(0,197,255,0.62),
-    0 0 48px 10px rgba(0,140,255,0.32);
-  border-radius: 50%;
-  pointer-events: none;
-}
-.hero-form-card h2 {
-  font-size: clamp(1.3rem, 2.5vw, 1.75rem);
-  color: #fff;
-  margin-bottom: var(--space-xs);
-  letter-spacing: -0.02em;
-}
-.hero-form-tagline {
-  color: var(--color-text-muted);
-  font-size: var(--fs-sm);
-  margin-bottom: var(--space-xl);
-}
-.hero-form {
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-sm);
-}
-.form-row { position: relative; }
-.hero-form input,
-.hero-form select {
-  width: 100%;
-  background: rgba(255,255,255,0.06);
-  border: 1px solid rgba(255,255,255,0.11);
-  border-radius: var(--radius-md);
-  padding: 0.875rem var(--space-lg);
-  color: var(--color-text);
-  font-family: var(--font-body);
-  font-size: var(--fs-sm);
-  transition:
-    border-color var(--transition-fast),
-    background var(--transition-fast),
-    box-shadow var(--transition-fast);
-  appearance: none;
-  -webkit-appearance: none;
-}
-.hero-form input:focus,
-.hero-form select:focus {
-  outline: none;
-  border-color: var(--color-accent);
-  background: rgba(0,197,255,0.05);
-  box-shadow: 0 0 0 3px rgba(0,197,255,0.12);
-}
-.hero-form input::placeholder { color: rgba(255,255,255,0.32); }
-.hero-form select { color: rgba(255,255,255,0.65); cursor: pointer; }
-.hero-form select option { background: var(--color-bg-card); color: var(--color-text); }
-.hero-form .btn-submit {
-  width: 100%;
-  justify-content: center;
-  margin-top: var(--space-sm);
-  padding: 1em 2em;
-}
-.form-footnote {
-  font-size: 0.7rem;
-  color: var(--color-text-subtle);
-  text-align: center;
-  margin-top: var(--space-sm);
-  line-height: 1.65;
-}
-.form-footnote a { color: rgba(0,197,255,0.7); }
 
 /* ── Hero Overlay — enhanced electric blue atmosphere ── */
 .hero .hero-overlay {
@@ -532,11 +447,36 @@ $barPhoto = 'https://db.pageone.cloud/storage/v1/object/public/client-assets/bar
   border-radius: var(--radius-lg);
   padding: var(--space-xl);
   transition: all var(--transition-base);
+  overflow: hidden;
 }
 .why-card:hover {
   border-color: rgba(0,197,255,0.22);
   transform: translateY(-3px);
   box-shadow: var(--shadow-lg);
+}
+.why-card-img {
+  margin: calc(-1 * var(--space-xl)) calc(-1 * var(--space-xl)) var(--space-lg);
+  border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+  overflow: hidden;
+  aspect-ratio: 5 / 2;
+  position: relative;
+}
+.why-card-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s ease;
+}
+.why-card:hover .why-card-img img {
+  transform: scale(1.05);
+}
+.why-card-img::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 30%, rgba(5,7,20,0.55) 100%);
+  pointer-events: none;
 }
 .why-card .card-icon {
   width: 52px;
@@ -631,10 +571,6 @@ $barPhoto = 'https://db.pageone.cloud/storage/v1/object/public/client-assets/bar
 
 /* ── Responsive ── */
 @media (max-width: 1100px) {
-  .hero-split {
-    grid-template-columns: 1fr 1fr;
-    gap: var(--space-3xl);
-  }
   .vibe-badge {
     left: var(--space-md);
     bottom: var(--space-md);
@@ -650,20 +586,13 @@ $barPhoto = 'https://db.pageone.cloud/storage/v1/object/public/client-assets/bar
   .process-steps {
     grid-template-columns: 1fr 1fr;
   }
-  .hero-split {
-    grid-template-columns: 1fr;
-    gap: var(--space-3xl);
-    align-items: flex-start;
-  }
-  .hero-title { font-size: clamp(1.7rem, 6vw, 2.6rem); }
+  .hero-title { font-size: clamp(2.2rem, 8vw, 4rem); }
   .hero-subtitle { max-width: 100%; }
-  .hero-form-card { max-width: 520px; margin-top: var(--space-2xl); }
   .vibe-image { display: none; }
 }
 @media (max-width: 768px) {
   .faq-grid { grid-template-columns: 1fr; }
   .hero-trust-strip { gap: var(--space-md); }
-  .hero-form-card { padding: var(--space-xl); }
   .home-cta-banner .cta-motto { letter-spacing: -0.01em; }
 }
 @media (max-width: 580px) {
@@ -752,74 +681,6 @@ $barPhoto = 'https://db.pageone.cloud/storage/v1/object/public/client-assets/bar
       </div>
 
     </div><!-- /.hero-text -->
-
-    <!-- ── Right: Lead-Capture Form ── -->
-    <aside class="hero-form-card" id="estimate-form" aria-label="Plan your visit form">
-
-      <h2>Plan Your Night</h2>
-      <p class="hero-form-tagline">We'll save you a spot. No obligation.</p>
-
-      <form action="<?= htmlspecialchars($formAction) ?>" method="POST" class="hero-form"
-            aria-label="Bar Blu reservation inquiry">
-
-        <!-- Honeypot -->
-        <input type="text" name="_honeypot"
-               style="display:none !important"
-               tabindex="-1" autocomplete="off" aria-hidden="true">
-
-        <!-- Hidden tracking -->
-        <input type="hidden" name="_next" value="/thank-you">
-        <input type="hidden" name="_consent_version" value="v2.1">
-        <input type="hidden" name="_consent_page"
-               value="<?= htmlspecialchars($_SERVER['REQUEST_URI']) ?>">
-        <input type="hidden" name="_form_location" value="hero">
-
-        <div class="form-row">
-          <input type="text" name="name"
-                 placeholder="Your name"
-                 required
-                 autocomplete="name"
-                 aria-label="Your name">
-        </div>
-
-        <div class="form-row">
-          <input type="tel" name="phone"
-                 placeholder="Phone number"
-                 required
-                 autocomplete="tel"
-                 aria-label="Phone number">
-        </div>
-
-        <div class="form-row">
-          <input type="text" name="date"
-                 placeholder="Event date (if you have one)"
-                 autocomplete="off"
-                 aria-label="Event date">
-        </div>
-
-        <div class="form-row">
-          <select name="service" aria-label="What brings you in?">
-            <option value="">What brings you in?</option>
-            <option value="sports-night">Sports Night / Watch Party</option>
-            <option value="birthday">Birthday Party</option>
-            <option value="private-event">Private Event Inquiry</option>
-            <option value="live-music">Live Music Night</option>
-            <option value="just-coming-out">Just Coming Out</option>
-          </select>
-        </div>
-
-        <button type="submit" class="btn btn-primary btn-submit">
-          Reserve My Spot
-        </button>
-
-        <p class="form-footnote">
-          By submitting you agree to our
-          <a href="/terms/">Terms</a> and
-          <a href="/privacy-policy/">Privacy Policy</a>.
-        </p>
-
-      </form>
-    </aside><!-- /.hero-form-card -->
 
   </div><!-- /.hero-split -->
 </section><!-- /.hero -->
@@ -921,8 +782,8 @@ $barPhoto = 'https://db.pageone.cloud/storage/v1/object/public/client-assets/bar
       ?>
       <article class="service-card-with-image <?= $tint ?> <?= $expClass ?> reveal-up <?= $delay ?>">
         <div class="service-card__image">
-          <img src="<?= htmlspecialchars($barPhoto) ?>"
-               alt="<?= htmlspecialchars($svc['name']) ?> at Bar Blu sports bar in Pompano Beach, FL"
+          <img src="<?= htmlspecialchars($svc['image']) ?>"
+               alt="<?= htmlspecialchars($svc['imageAlt']) ?>"
                width="600" height="360"
                loading="lazy">
         </div>
@@ -992,7 +853,7 @@ $barPhoto = 'https://db.pageone.cloud/storage/v1/object/public/client-assets/bar
       </div>
 
       <div class="stat-block reveal-scale reveal-delay-4">
-        <div class="stat-number" data-counter="6">6</div>
+        <div class="stat-number" data-counter="7">7</div>
         <div class="stat-label">Nights Per Week</div>
       </div>
 
@@ -1070,7 +931,7 @@ $barPhoto = 'https://db.pageone.cloud/storage/v1/object/public/client-assets/bar
 
       <!-- Right: Image -->
       <div class="vibe-image reveal-right">
-        <img src="<?= htmlspecialchars($barPhoto) ?>"
+        <img src="<?= htmlspecialchars($vibeImage) ?>"
              alt="Inside Bar Blu — Pompano Beach's neighborhood sports bar and nightlife venue at 537 S Dixie Hwy E"
              width="600" height="720"
              loading="lazy">
@@ -1206,6 +1067,12 @@ $barPhoto = 'https://db.pageone.cloud/storage/v1/object/public/client-assets/bar
     <div class="why-grid" data-p1-dynamic>
       <?php foreach ($services as $i => $svc): ?>
       <div class="why-card reveal-up <?= ['reveal-delay-1','reveal-delay-2','reveal-delay-3'][$i % 3] ?>">
+        <div class="why-card-img">
+          <img src="<?= htmlspecialchars($svc['image']) ?>"
+               alt="<?= htmlspecialchars($svc['imageAlt']) ?>"
+               width="400" height="160"
+               loading="lazy">
+        </div>
         <div class="card-icon">
           <i data-lucide="<?= htmlspecialchars($svc['icon']) ?>" aria-hidden="true"></i>
         </div>

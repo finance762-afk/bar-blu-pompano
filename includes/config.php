@@ -170,7 +170,7 @@ $style     = 'bold';    // Bold/Industrial archetype
 $cssVersion = '2';      // Increment on every styles.css change
 
 // ── Form ────────────────────────────────────────────────────
-$formAction = 'https://design.pageone.cloud/api/leads/bar-blu-pompano';
+$formAction = 'https://db.pageone.cloud/functions/v1/leads/bar-blu-pompano';
 
 // ── Content USPs ────────────────────────────────────────────
 $usps = [
