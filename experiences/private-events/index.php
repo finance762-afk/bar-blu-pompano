@@ -781,7 +781,7 @@ h3 .text-accent {
 
             <label class="consent-field" style="margin-top:var(--space-sm);">
               <input type="checkbox" name="terms_accepted" value="yes" required>
-              <span>I have read and agree to the <a href="/privacy-policy/">Privacy Policy</a> and <a href="/terms/">Terms of Service</a>. <span class="required-star">*</span></span>
+              <span>I have read and agree to the <a href="/privacy-policy/" target="_blank" rel="noopener">Privacy Policy</a> and <a href="/terms/" target="_blank" rel="noopener">Terms of Service</a>. <span class="required-star">*</span></span>
             </label>
 
           </fieldset>
