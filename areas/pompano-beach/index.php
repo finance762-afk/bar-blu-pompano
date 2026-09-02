@@ -26,7 +26,7 @@ $faqSchema        = generateFAQSchema($pageFaqs);
 
 $areaSchema = json_encode([
     '@context' => 'https://schema.org',
-    '@type'    => 'BarOrLounge',
+    '@type'    => 'BarOrPub',
     'name'     => $siteNameFull,
     'url'      => $siteUrl . '/areas/pompano-beach/',
     '@id'      => $siteUrl . '/#organization',

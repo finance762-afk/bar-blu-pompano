@@ -72,7 +72,7 @@ function generateServiceSchema(array $service, string $url = ''): string
         'description' => $service['description'] ?? '',
         'url'      => $pageUrl,
         'provider' => [
-            '@type' => 'BarOrLounge',
+            '@type' => 'BarOrPub',
             '@id'   => $siteUrl . '/#organization',
             'name'  => $siteNameFull,
         ],

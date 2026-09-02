@@ -26,7 +26,7 @@ $faqSchema = generateFAQSchema($pageFaqs);
 
 $areaSchema = json_encode([
     '@context'   => 'https://schema.org',
-    '@type'      => 'BarOrLounge',
+    '@type'      => 'BarOrPub',
     '@id'        => $siteUrl . '/#organization',
     'name'       => $siteNameFull,
     'url'        => $siteUrl . '/areas/fort-lauderdale/',

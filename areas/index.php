@@ -18,7 +18,7 @@ $schemaMarkup = json_encode([
     '@graph'   => [
         json_decode($breadcrumbSchema, true),
         [
-            '@type'    => 'BarOrLounge',
+            '@type'    => 'BarOrPub',
             '@id'      => $siteUrl . '/#organization',
             'name'     => $siteNameFull,
             'url'      => $siteUrl,
