@@ -124,9 +124,6 @@ $schemaMarkup = json_encode([
         <?php endif; ?>
       </p>
 
-      <div class="legal-disclaimer">
-        This Terms of Service document is provided as a general template. We recommend reviewing this document with a licensed Florida attorney before publication to ensure compliance with current state and federal law.
-      </div>
 
   </article>
 

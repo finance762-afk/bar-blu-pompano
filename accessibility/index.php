@@ -123,9 +123,6 @@ $schemaMarkup = json_encode([
       <h2>8. Assessment Approach</h2>
       <p><?= htmlspecialchars($companyName) ?> assessed the accessibility of this website by self-evaluation using manual testing with keyboard navigation, automated tools, and developer review against WCAG 2.1 AA criteria.</p>
 
-      <div class="legal-disclaimer">
-        This Accessibility Statement is provided as a general template. We recommend reviewing this document with a licensed Florida attorney and an accessibility specialist before publication to ensure accuracy and legal adequacy.
-      </div>
 
   </article>
 

@@ -118,9 +118,6 @@ $schemaMarkup = json_encode([
         Email: <a href="mailto:<?= htmlspecialchars($companyEmail) ?>"><?= htmlspecialchars($companyEmail) ?></a>
       </p>
 
-      <div class="legal-disclaimer">
-        This Cookie Policy is provided as a general template. We recommend reviewing this document with a licensed Florida attorney before publication to ensure compliance with current privacy regulations.
-      </div>
 
   </article>
 

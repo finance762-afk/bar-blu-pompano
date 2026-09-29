@@ -144,9 +144,6 @@ $schemaMarkup = json_encode([
         <?php endif; ?>
       </p>
 
-      <div class="legal-disclaimer">
-        This Privacy Policy is provided as a general template. We recommend reviewing this document with a licensed Florida attorney before publication to ensure compliance with current state and federal privacy laws.
-      </div>
 
   </article>
 
